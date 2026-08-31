@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#FDEFEB"/>
+  <text x="80" y="90" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#07334F">DOHNUT CREATIVE OS</text>
+  <text x="80" y="135" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#07334F">Brand Truth → Creative Genome → Creative Modules → AI Production → QA → Memory</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <rect x="80" y="200" rx="28" width="250" height="115" fill="#EF2027" stroke="#07334F" stroke-width="6"/>
+    <text x="205" y="250" font-size="28" fill="#FFFFFF">BRAND TRUTH</text>
+    <text x="205" y="285" font-size="19" fill="#FFFFFF">Constitution + tokens</text>
+
+    <rect x="380" y="200" rx="28" width="250" height="115" fill="#297ABE" stroke="#07334F" stroke-width="6"/>
+    <text x="505" y="250" font-size="28" fill="#FFFFFF">CREATIVE GENOME</text>
+    <text x="505" y="285" font-size="19" fill="#FFFFFF">Structured brief</text>
+
+    <rect x="680" y="160" rx="28" width="220" height="85" fill="#E8F866" stroke="#07334F" stroke-width="5"/>
+    <text x="790" y="212" font-size="24" fill="#07334F">DOH LANGUAGE™</text>
+    <rect x="680" y="255" rx="28" width="220" height="85" fill="#EF9FBD" stroke="#07334F" stroke-width="5"/>
+    <text x="790" y="307" font-size="24" fill="#07334F">DOH CINEMA™</text>
+    <rect x="680" y="350" rx="28" width="220" height="85" fill="#FFFFFF" stroke="#07334F" stroke-width="5"/>
+    <text x="790" y="402" font-size="24" fill="#07334F">DOH BOY™</text>
+
+    <rect x="950" y="200" rx="28" width="250" height="115" fill="#07334F" stroke="#07334F" stroke-width="6"/>
+    <text x="1075" y="250" font-size="28" fill="#FFFFFF">PROMPT ENGINE</text>
+    <text x="1075" y="285" font-size="19" fill="#FFFFFF">Provider adapters</text>
+
+    <rect x="1250" y="200" rx="28" width="250" height="115" fill="#EF2027" stroke="#07334F" stroke-width="6"/>
+    <text x="1375" y="250" font-size="28" fill="#FFFFFF">GENERATION</text>
+    <text x="1375" y="285" font-size="19" fill="#FFFFFF">Image • Video • Copy</text>
+  </g>
+
+  <g stroke="#07334F" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M330 257 H380"/>
+    <path d="M630 257 H680"/>
+    <path d="M900 257 H950"/>
+    <path d="M1200 257 H1250"/>
+    <path d="M1375 315 V480"/>
+  </g>
+  <g fill="#07334F">
+    <path d="M380 257 l-18 -10 v20 z"/>
+    <path d="M680 257 l-18 -10 v20 z"/>
+    <path d="M950 257 l-18 -10 v20 z"/>
+    <path d="M1250 257 l-18 -10 v20 z"/>
+    <path d="M1375 480 l-12 -20 h24 z"/>
+  </g>
+
+  <rect x="1050" y="465" rx="28" width="320" height="100" fill="#E8F866" stroke="#07334F" stroke-width="6"/>
+  <text x="1210" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#07334F">QUALITY GATES</text>
+  <text x="1210" y="548" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#07334F">Brand • Product • IP • Platform</text>
+
+  <path d="M1050 515 H890" stroke="#07334F" stroke-width="7" fill="none"/>
+  <path d="M890 515 l18 -10 v20 z" fill="#07334F"/>
+
+  <rect x="560" y="465" rx="28" width="320" height="100" fill="#FFFFFF" stroke="#07334F" stroke-width="6"/>
+  <text x="720" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#07334F">ASSET REGISTRY</text>
+  <text x="720" y="548" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#07334F">Lineage • version • approval</text>
+
+  <path d="M560 515 H400" stroke="#07334F" stroke-width="7" fill="none"/>
+  <path d="M400 515 l18 -10 v20 z" fill="#07334F"/>
+
+  <rect x="120" y="465" rx="28" width="280" height="100" fill="#297ABE" stroke="#07334F" stroke-width="6"/>
+  <text x="260" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#FFFFFF">CREATIVE MEMORY</text>
+  <text x="260" y="548" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#FFFFFF">Performance → learning</text>
+
+  <rect x="120" y="650" rx="30" width="1360" height="150" fill="#07334F"/>
+  <text x="800" y="705" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">GOOD VIBE. GOOD DOH.</text>
+  <text x="800" y="750" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#FFFFFF">REAL FOOD FIRST. PLAY SECOND. BRAND ALWAYS.</text>
+</svg>
