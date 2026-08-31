@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.2.0] — 2026-08-31
+
+### Added
+
+- Unified root `PRD.md` for product requirements and acceptance criteria.
+- Unified root `ARCHITECTURE.md` for commerce, Creative OS, ERP and AI runtime boundaries.
+- Unified root `DESIGN.md` for ecommerce + Creative Studio UX/UI standards.
+- Unified root `ERP.md` for operational business systems.
+- Unified root `PROMPT.md` for prompt engineering, Creative Genome, routing and provider adapter contracts.
+- `INTEGRATION-E-COMMERCE.md` defining the integration contract with `thisidowgnut-source/Dowgnut-Custom`.
+
+### Changed
+
+- README now presents DOHNUT-Creative-OS as the canonical creative/intelligence layer and `Dowgnut-Custom` as the ecommerce/application layer.
+- System Index upgraded to version 1.2.0 and links the unified project documents.
+
+### Integration Note
+
+The target architecture is a governed system-of-systems. The Creative OS repository does not blindly absorb the ecommerce application code. The application repository remains authoritative for customer commerce, order, payment and inventory runtime.
+
+The current GitHub connection has read-only access to `thisidowgnut-source/Dowgnut-Custom`; therefore no code was written into that repository from this session. The integration contract is committed here so implementation can proceed without architecture drift.
+
 ## [1.1.0] — 2026-08-31
 
 ### Added
