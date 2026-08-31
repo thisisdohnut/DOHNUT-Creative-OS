@@ -1,10 +1,10 @@
 ---
 title: "DOHNUT Visual AI Engine™"
 date: "2026-08-31"
-version: "1.0.0"
+version: "1.0.1"
 author: "GangNiaga Sdn. Bhd. / DOHNUT"
 status: "draf"
-tags: [visual-ai, prompt-engineering, google-flow, image-generation, video-generation]
+tags: [visual-ai, prompt-engineering, google-flow, image-generation, video-generation, benchmark]
 related_documents:
   - "../brand/brand-constitution-v1.0.0.md"
   - "../creative/doh-language-v1.0.0.md"
@@ -12,6 +12,7 @@ related_documents:
   - "../creative/doh-boy-v1.0.0.md"
   - "../creative/pop-culture-playbook-v1.0.0.md"
   - "./creative-genome-v1.0.0.md"
+  - "./dohnut-visual-benchmark-v1.0.0.md"
   - "../ai/prompt-system-v1.0.0.md"
 ---
 
@@ -25,6 +26,8 @@ Sistem generatif modular yang menukar **brand truth + product + culture + creati
 
 ```text
 BRAND TRUTH
+  ↓
+VISUAL BENCHMARK
   ↓
 CREATIVE GENOME
   ↓
@@ -45,7 +48,19 @@ PERFORMANCE FEEDBACK
 CREATIVE MEMORY
 ```
 
-## 3. Visual promise
+## 3. Master visual benchmark
+
+The original user-provided chocolate-hazelnut stuffed donut image is the **MASTER VISUAL REFERENCE / NORTH STAR** for DOHNUT product hero imagery.
+
+See [DOHNUT Visual Benchmark](./dohnut-visual-benchmark-v1.0.0.md).
+
+### Benchmark rule
+
+> **REAL FOOD FIRST. PLAY SECOND. BRAND ALWAYS.**
+
+Generic AI style presets must not override benchmark characteristics when they conflict with the approved visual direction.
+
+## 4. Visual promise
 
 ### Can I Taste It?
 Food texture, scale, filling, freshness dan lighting mesti nampak appetizing.
@@ -56,7 +71,7 @@ Bentuk lembut, tactile, rounded dan material quality mesti terasa secara visual.
 ### Can I Recognize It?
 Walaupun logo dikeluarkan, visual mesti masih terasa seperti DOHNUT.
 
-## 4. Prompt tiers
+## 5. Prompt tiers
 
 | Tier | Purpose |
 | --- | --- |
@@ -66,14 +81,20 @@ Walaupun logo dikeluarkan, visual mesti masih terasa seperti DOHNUT.
 | T4 | Pop culture / DOH Cinema |
 | T5 | Hero integrated campaign |
 
-## 5. Variable system
+## 6. Variable system
 
-`product_type`, `flavour`, `filling_behaviour`, `camera`, `lighting`, `background`, `environment`, `character_mode`, `cinema_mode`, `copy`, `platform`, `objective`.
+`product_type`, `flavour`, `filling_behaviour`, `camera`, `lighting`, `background`, `environment`, `character_mode`, `cinema_mode`, `copy`, `platform`, `objective`, `benchmark_mode`.
 
-## 6. Master visual instruction
+## 7. Master visual instruction
 
 ```text
 Create a premium hero visual for DOHNUT, a Malaysian-born premium donut D2C brand.
+
+BENCHMARK
+Use the DOHNUT Visual Benchmark as the primary quality reference.
+Preserve the benchmark's balance of realistic baked food, soft tactile dough,
+credible filling behaviour, premium commercial lighting, bold clean yellow,
+and restrained playful energy.
 
 SUBJECT
 A premium [DONUT TYPE / FLAVOUR] donut with [PRODUCT CHARACTERISTICS].
@@ -85,28 +106,37 @@ FILLING / TOPPING
 [INSERT FILLING OR TOPPING]. Show realistic viscosity, gloss, texture and natural movement.
 
 VISUAL LANGUAGE
-Premium commercial food photography combined with tactile 3D product rendering, playful materiality and bold contemporary branding.
+Premium commercial food photography combined with controlled tactile materiality,
+playful rounded forms and bold contemporary branding. Avoid overly synthetic CGI.
 
 LIGHTING
 Soft professional studio lighting, gentle highlights and controlled contact shadows.
 
 COMPOSITION
-Hero product dominance, clean composition and generous negative space.
+Hero product dominance, balanced scale, clean composition and generous negative space.
 
 BACKGROUND
-Use the approved DOHNUT background token or campaign background.
+Use the approved DOHNUT yellow or another approved campaign background.
 
 BRAND DNA
 Playful. Bold. Tactile. Premium. Authentic. Youthful. Internet-native.
 
+LOGO
+Do not redraw the master DOHNUT logo with the model. Leave clean space for approved artwork to be composited later.
+
 AVOID
-Generic bakery photography, plastic food, distorted branding, unrelated colours, copied protected assets, clutter and unexplained text.
+Generic bakery photography, plastic food, over-exaggerated CGI, distorted branding,
+unrelated colours, copied protected assets, clutter and unexplained text.
 ```
 
-## 7. Example — Chocolate Hazelnut
+## 8. Example — Chocolate Hazelnut
 
-> A premium stuffed chocolate-hazelnut donut with thick golden-brown dough, soft tactile structure and rich glossy filling overflowing naturally from the center. High-end food photography meets playful tactile 3D rendering. Soft studio lighting, gentle highlights, clean saturated DOHNUT yellow background, premium and unmistakably playful.
+> A premium stuffed chocolate-hazelnut donut matching the DOHNUT Visual Benchmark: thick golden-brown soft dough, believable baked texture, rich glossy filling overflowing naturally from the center, clean saturated yellow background, soft studio lighting, balanced premium composition and restrained tactile playfulness.
 
-## 8. Example — DOH WICK campaign
+## 9. Example — DOH WICK campaign
 
-> A cinematic DOHNUT action campaign featuring a chocolate-hazelnut stuffed donut as the hero. Original action-film visual language, dramatic premium lighting, Doh Boy in action-hero mode, rich filling visible, bold DOHNUT yellow environment, original typography and composition. Headline: DOH WICK. Subheadline: THE LAST BITE. Keep the execution original and do not reproduce any protected movie poster or character asset.
+> A cinematic DOHNUT action campaign featuring a chocolate-hazelnut stuffed donut as the hero. Use the benchmark for food realism, dough texture, colour discipline and premium product rendering. Add original action-film visual language, dramatic but controlled lighting, Doh Boy in action-hero mode, rich filling visible, bold DOHNUT yellow environment, original typography and composition. Headline: DOH WICK. Subheadline: THE LAST BITE. Keep the execution original and do not reproduce any protected movie poster or character asset.
+
+## 10. Benchmark QA override
+
+When a candidate image looks more artificial, more cluttered, more exaggerated or less appetizing than the benchmark, **regenerate** rather than adding more decorative effects.
