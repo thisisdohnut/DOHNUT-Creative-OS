@@ -1,9 +1,9 @@
 ---
 title: "DOHNUT Creative OS System Index"
 date: "2026-08-31"
-version: "1.0.1"
+version: "1.1.0"
 author: "GangNiaga Sdn. Bhd. / DOHNUT"
-status: "draf"
+status: "approved"
 tags: [index, architecture, roadmap, ai, governance, visual-benchmark]
 related_documents:
   - "../README.md"
@@ -14,10 +14,17 @@ related_documents:
   - "./creative/pop-culture-playbook-v1.0.0.md"
   - "./visual-ai/visual-ai-engine-v1.0.1.md"
   - "./visual-ai/dohnut-visual-benchmark-v1.0.0.md"
+  - "./visual-ai/creative-genome-v1.0.0.md"
+  - "./visual-ai/google-flow-prompt-template-v1.0.0.md"
   - "./ai/prompt-system-v1.0.0.md"
+  - "./ai/provider-architecture-v1.0.0.md"
   - "./ai/skills-matrix-v1.0.0.md"
   - "./schemas/data-contracts-v1.0.0.md"
+  - "./schemas/asset-registry-v1.0.0.md"
   - "./governance/governance-v1.0.0.md"
+  - "./governance/source-of-truth-hierarchy-v1.0.0.md"
+  - "./governance/quality-gates-v1.0.0.md"
+  - "./governance/markdown-authoring-standard-v1.0.0.md"
 ---
 
 # DOHNUT Creative OS System Index
@@ -26,7 +33,11 @@ related_documents:
 
 Membina satu **creative operating system** yang memastikan setiap idea, prompt, visual, campaign dan asset boleh dihasilkan secara scalable sambil mengekalkan identiti DOHNUT.
 
-## 2. Core architecture
+## 2. Source of truth
+
+Rujuk [Source of Truth Hierarchy](./governance/source-of-truth-hierarchy-v1.0.0.md) sebelum membuat perubahan. Higher-level constraints sentiasa mengatasi lower-level experiments.
+
+## 3. Core architecture
 
 ```text
 BRAND TRUTH
@@ -45,6 +56,8 @@ CREATIVE GENOME
                 ↓
          PROMPT COMPILER
                 ↓
+        PROVIDER ADAPTER
+                ↓
    TEXT / IMAGE / VIDEO GENERATION
                 ↓
           QUALITY GATES
@@ -56,9 +69,9 @@ CREATIVE GENOME
         CREATIVE MEMORY
 ```
 
-## 3. Module map
+## 4. Module map
 
-| ID | Module | Output | Independent? |
+| **ID** | **Module** | **Output** | **Independent?** |
 | --- | --- | --- | --- |
 | MOD-01 | Brand Constitution | brand truth | Ya |
 | MOD-02 | DOH Language | puns, hooks, copy | Ya |
@@ -66,18 +79,21 @@ CREATIVE GENOME
 | MOD-04 | Doh Boy | character behaviour/copy | Ya |
 | MOD-05 | Pop Culture Adapter | transformed references | Ya |
 | MOD-06 | Visual Benchmark | visual quality reference | Ya |
-| MOD-07 | Visual AI Engine | production prompts | Bergantung pada genome + benchmark |
-| MOD-08 | Prompt System | reusable task prompts | Ya |
-| MOD-09 | Skills | capability requirements | Ya |
-| MOD-10 | Governance + QA | rules, scores + fixes | Ya |
+| MOD-07 | Creative Genome | structured creative brief | Ya |
+| MOD-08 | Visual AI Engine | production prompts | Bergantung pada genome + benchmark |
+| MOD-09 | Prompt System | reusable task prompts | Ya |
+| MOD-10 | Provider Architecture | routing + fallback | Ya |
+| MOD-11 | Skills | capability requirements | Ya |
+| MOD-12 | Governance + QA | rules, scores + fixes | Ya |
+| MOD-13 | Asset Registry | provenance + lineage | Ya |
 
-## 4. Recommended execution order
+## 5. Recommended execution order
 
 ### Phase 1 — Truth
 
-1. Lock brand constitution.
-2. Lock glossary.
-3. Lock visual benchmark and approved assets.
+1. Lock brand constitution and glossary.
+2. Lock visual benchmark and approved assets.
+3. Apply source-of-truth precedence.
 
 ### Phase 2 — Creative language
 
@@ -88,22 +104,22 @@ CREATIVE GENOME
 
 ### Phase 3 — AI production
 
-8. Use Creative Genome schema.
-9. Apply Visual Benchmark.
-10. Select prompt(s) by deliverable.
-11. Compile provider-specific prompt.
+8. Build or validate the Creative Genome.
+9. Select prompt family.
+10. Compile provider-neutral prompt core.
+11. Apply provider adapter and fallback policy.
 12. Generate.
 
 ### Phase 4 — QA and learning
 
-13. Run brand, product, technical and IP QA.
+13. Run visual benchmark and quality gates.
 14. Approve or revise.
 15. Register asset lineage.
 16. Capture performance feedback.
 
-## 5. Quality definition
+## 6. Quality definition
 
-Sesuatu asset dianggap ready apabila:
+Asset dianggap ready apabila:
 
 - Brand Truth pass.
 - Visual benchmark pass.
@@ -114,22 +130,15 @@ Sesuatu asset dianggap ready apabila:
 - Metadata and version pass.
 - Human owner approval pass apabila diperlukan.
 
-## 6. 30-60-90 day roadmap
-
-| Period | Fokus | Deliverables |
-| --- | --- | --- |
-| 0-30 | Foundation | constitution, glossary, benchmark, genome, prompt registry |
-| 31-60 | Creative engine | DOH modules, playbook, visual compiler, QA |
-| 61-90 | Operations | asset registry, metrics, automation, regression tests |
-
 ## 7. Definition of Done
 
-- [ ] Front matter lengkap.
+- [ ] Front matter lengkap untuk machine-facing docs.
 - [ ] Semver valid.
 - [ ] Cross-reference valid.
 - [ ] Inputs dan outputs jelas.
 - [ ] Constraints dinyatakan.
-- [ ] Examples tersedia untuk tugas kompleks.
+- [ ] Examples tersedia untuk task kompleks.
 - [ ] Visual benchmark applied where relevant.
 - [ ] QA gate dipetakan.
+- [ ] Asset lineage tersedia untuk generated/approved assets.
 - [ ] Changelog dikemas kini.
