@@ -1,0 +1,20 @@
+version: 1.0.0
+updated: 2026-08-31
+brand: DOHNUT
+modules:
+  brand: [PRM-01]
+  content: [PRM-02]
+  pop_culture: [PRM-03]
+  social: [PRM-04]
+  packaging: [PRM-05]
+  campaign: [PRM-06]
+  visual_direction: [PRM-07]
+  data_analysis: [PRM-08]
+  quality_review: [PRM-09]
+  project_management: [PRM-10]
+  orchestration: [PRM-11]
+  documentation: [PRM-12]
+visual_engine:
+  master_prompt: docs/visual-ai/visual-ai-engine-v1.0.0.md
+  genome: docs/visual-ai/creative-genome-v1.0.0.md
+quality_gates: [QG-01,QG-02,QG-03,QG-04,QG-05,QG-06,QG-07,QG-08,QG-09,QG-10]
