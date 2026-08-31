@@ -1,12 +1,18 @@
 ---
-title: "DOHNUT Creative OS System Index"
+title: "DOHNUT Commerce + Creative OS System Index"
 date: "2026-08-31"
-version: "1.1.0"
+version: "1.2.0"
 author: "GangNiaga Sdn. Bhd. / DOHNUT"
 status: "approved"
-tags: [index, architecture, roadmap, ai, governance, visual-benchmark]
+tags: [index, architecture, ecommerce, ai, governance, visual-benchmark, erp]
 related_documents:
   - "../README.md"
+  - "../PRD.md"
+  - "../ARCHITECTURE.md"
+  - "../DESIGN.md"
+  - "../ERP.md"
+  - "../PROMPT.md"
+  - "../INTEGRATION-E-COMMERCE.md"
   - "./brand/brand-constitution-v1.0.0.md"
   - "./creative/doh-language-v1.0.0.md"
   - "./creative/doh-cinema-v1.0.0.md"
@@ -27,17 +33,28 @@ related_documents:
   - "./governance/markdown-authoring-standard-v1.0.0.md"
 ---
 
-# DOHNUT Creative OS System Index
+# DOHNUT Commerce + Creative OS System Index
 
 ## 1. Objective
 
-Membina satu **creative operating system** yang memastikan setiap idea, prompt, visual, campaign dan asset boleh dihasilkan secara scalable sambil mengekalkan identiti DOHNUT.
+Satu **operating model** untuk menyambungkan brand truth, creative intelligence, AI generation, ecommerce, operations/ERP dan customer feedback tanpa kehilangan traceability.
 
-## 2. Source of truth
+## 2. Master Development Documents
 
-Rujuk [Source of Truth Hierarchy](./governance/source-of-truth-hierarchy-v1.0.0.md) sebelum membuat perubahan. Higher-level constraints sentiasa mengatasi lower-level experiments.
+| **Document** | **Purpose** |
+| --- | --- |
+| [PRD](../PRD.md) | Product scope, requirements, users and acceptance criteria |
+| [ARCHITECTURE](../ARCHITECTURE.md) | Technical boundaries, services, data and integration |
+| [DESIGN](../DESIGN.md) | UI/UX, Figma, visual system and experience flows |
+| [ERP](../ERP.md) | Inventory, production, procurement, fulfilment and finance |
+| [PROMPT](../PROMPT.md) | Prompt contracts, routing and AI execution |
+| [Ecommerce Integration](../INTEGRATION-E-COMMERCE.md) | DOHNUT-Creative-OS ↔ Dowgnut-Custom contract |
 
-## 3. Core architecture
+## 3. Source of Truth
+
+Rujuk [Source of Truth Hierarchy](./governance/source-of-truth-hierarchy-v1.0.0.md). Higher-level constraints sentiasa mengatasi lower-level experiments.
+
+## 4. System Architecture
 
 ```text
 BRAND TRUTH
@@ -48,28 +65,45 @@ CONTROLLED GLOSSARY
     ↓
 CREATIVE GENOME
     ↓
-┌──────────────┬──────────────┬──────────────┐
-│ DOH LANGUAGE │ DOH CINEMA   │ DOH BOY      │
-└──────────────┴──────────────┴──────────────┘
-                ↓
-       POP CULTURE ADAPTER
-                ↓
-         PROMPT COMPILER
-                ↓
-        PROVIDER ADAPTER
-                ↓
-   TEXT / IMAGE / VIDEO GENERATION
-                ↓
-          QUALITY GATES
-                ↓
-         ASSET REGISTRY
-                ↓
-     PERFORMANCE + LEARNING
-                ↓
-        CREATIVE MEMORY
+DOH LANGUAGE™ ── DOH CINEMA™ ── DOH BOY™
+    ↓
+POP CULTURE ADAPTER
+    ↓
+PROMPT COMPILER
+    ↓
+PROVIDER ADAPTER
+    ↓
+TEXT / IMAGE / VIDEO GENERATION
+    ↓
+QUALITY GATES
+    ↓
+ASSET REGISTRY
+    ↓
+PERFORMANCE + LEARNING
+    ↓
+CREATIVE MEMORY
+    │
+    ▼
+ECOMMERCE / ERP
 ```
 
-## 4. Module map
+## 5. Repository Model
+
+```text
+DOHNUT-Creative-OS
+        │
+        │ canonical creative intelligence
+        ▼
+Dowgnut-Custom
+        │
+        │ commerce application runtime
+        ▼
+Customer Experience
+```
+
+The target is integration by contract, not a blind file merge.
+
+## 6. Module Map
 
 | **ID** | **Module** | **Output** | **Independent?** |
 | --- | --- | --- | --- |
@@ -78,16 +112,18 @@ CREATIVE GENOME
 | MOD-03 | DOH Cinema | cinematic concepts | Ya |
 | MOD-04 | Doh Boy | character behaviour/copy | Ya |
 | MOD-05 | Pop Culture Adapter | transformed references | Ya |
-| MOD-06 | Visual Benchmark | visual quality reference | Ya |
+| MOD-06 | Visual Benchmark | visual reference | Ya |
 | MOD-07 | Creative Genome | structured creative brief | Ya |
 | MOD-08 | Visual AI Engine | production prompts | Bergantung pada genome + benchmark |
 | MOD-09 | Prompt System | reusable task prompts | Ya |
 | MOD-10 | Provider Architecture | routing + fallback | Ya |
 | MOD-11 | Skills | capability requirements | Ya |
-| MOD-12 | Governance + QA | rules, scores + fixes | Ya |
+| MOD-12 | Governance + QA | rules + scoring | Ya |
 | MOD-13 | Asset Registry | provenance + lineage | Ya |
+| MOD-14 | Commerce Integration | ecommerce contract | Bergantung pada app repo |
+| MOD-15 | ERP | business operations | Bergantung pada commerce |
 
-## 5. Recommended execution order
+## 7. Recommended Execution Order
 
 ### Phase 1 — Truth
 
@@ -95,50 +131,61 @@ CREATIVE GENOME
 2. Lock visual benchmark and approved assets.
 3. Apply source-of-truth precedence.
 
-### Phase 2 — Creative language
+### Phase 2 — Creative
 
-4. Load DOH Language.
-5. Load DOH Cinema.
-6. Load Doh Boy canon.
-7. Load Pop Culture Playbook.
+4. Validate DOH Language.
+5. Validate DOH Cinema.
+6. Lock Doh Boy canon.
+7. Maintain Pop Culture Playbook.
 
-### Phase 3 — AI production
+### Phase 3 — Commerce Foundation
 
-8. Build or validate the Creative Genome.
-9. Select prompt family.
-10. Compile provider-neutral prompt core.
-11. Apply provider adapter and fallback policy.
-12. Generate.
+8. Integrate ecommerce product contracts.
+9. Implement catalogue, product, DOH Box, checkout and orders.
+10. Connect approved creative assets.
 
-### Phase 4 — QA and learning
+### Phase 4 — AI Production
 
-13. Run visual benchmark and quality gates.
-14. Approve or revise.
+11. Validate Creative Genome.
+12. Compile prompts.
+13. Apply provider adapter/fallback.
+14. Generate and QA.
 15. Register asset lineage.
-16. Capture performance feedback.
 
-## 6. Quality definition
+### Phase 5 — ERP
 
-Asset dianggap ready apabila:
+16. Inventory.
+17. Production.
+18. Procurement.
+19. Fulfilment.
+20. Reconciliation/reporting.
 
+### Phase 6 — Learning
+
+21. Capture performance.
+22. Update Creative Memory.
+23. Improve routing and quality rules.
+
+## 8. Quality Definition
+
+Ready means:
 - Brand Truth pass.
-- Visual benchmark pass.
-- Product fidelity pass.
-- Visual/copy quality pass.
-- Platform suitability pass.
-- IP/cultural safety pass.
-- Metadata and version pass.
-- Human owner approval pass apabila diperlukan.
+- Visual benchmark pass when applicable.
+- Product/operational facts pass.
+- Platform fit pass.
+- IP/cultural/safety pass.
+- Metadata/version pass.
+- Human approval when required.
 
-## 7. Definition of Done
+## 9. Definition of Done
 
-- [ ] Front matter lengkap untuk machine-facing docs.
-- [ ] Semver valid.
-- [ ] Cross-reference valid.
-- [ ] Inputs dan outputs jelas.
-- [ ] Constraints dinyatakan.
-- [ ] Examples tersedia untuk task kompleks.
-- [ ] Visual benchmark applied where relevant.
-- [ ] QA gate dipetakan.
-- [ ] Asset lineage tersedia untuk generated/approved assets.
-- [ ] Changelog dikemas kini.
+- [ ] Requirement mapped.
+- [ ] UX mapped to Figma.
+- [ ] Architecture boundary documented.
+- [ ] Data contract exists where required.
+- [ ] Prompt/skill references valid.
+- [ ] QA gate mapped.
+- [ ] Asset lineage available.
+- [ ] Ecommerce/ERP authority rules respected.
+- [ ] Changelog updated.
+- [ ] Main branch contains the canonical change.
